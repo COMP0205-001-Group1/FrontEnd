@@ -19,7 +19,7 @@ function Home() {
                         <div className="center">
                             <img src={logo119} alt='logo' width={100} height={100} />
                         </div>
-                        <div class="label">
+                        <div className="label">
                             <p className='center-text-main'>화재진압용 <br />
                             영상 실시간 전송 모듈</p>
                             <p className='center-text-sub'>잠재적으로 위험한 화재를 예방하고  긴급 출동으로 인한 <br />
