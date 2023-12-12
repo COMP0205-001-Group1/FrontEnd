@@ -1,26 +1,28 @@
-import React from 'react';
-import "../styles/style.css";
+import React, {useState} from 'react';
+import { Container, Row } from "react-bootstrap";
+import VideoPlayer from "./camScreen";
+import axios from 'axios';
 
-const Cam2 = () =>{
-    return(
-        <p>p</p>
-    );
-};
-
-const Desktop = () => {
-    return (
-      <div className="desktop">
-        <div className="div">
-          <img className="union" alt="Union" src={require("../assets/union.svg").default} />
-          <img className="union-4" alt="Union" src={require("../assets/union-4.svg").default} />
-          <div className="overlap-group">
-            <img className="recicon" alt="Recicon" src={require("../assets/recicon.svg").default} />
-          </div>
-          <img className="union-2" alt="Union" src={require("../assets/union-3.svg").default} />
+function Cam2(){
+    const status = 0;
+    const extIP = "210.104.6.82"
+    const port = "8554"
+    const macAdrress = "E4-5F-01-AF-07-64"
+    const name = "2층"
+    const url = 'http://'+extIP+':'+port+'/'+macAdrress+'/video.m3u8'
+    if(status){
+        return(
+        <div>
+            카메라가 꺼져있습니다.
         </div>
-        <Cam2 />
-      </div>
+        );
+    }
+    return (
+        <div>
+        <h2>CAM {name}</h2>
+        <VideoPlayer src={url} type="m3u8" />
+        </div>
     );
-};
+}
 
-export default Desktop;
+export default Cam2;

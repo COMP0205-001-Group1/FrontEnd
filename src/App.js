@@ -14,8 +14,8 @@ return (
       <Navigation />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Cam1" element={<Cam1 />} />
-        <Route path="/Cam2" element={<Cam2 />} />
+        <Route path="/cam1" element={<Cam1 />} />
+        <Route path="/cam2" element={<Cam2 />} />
       </Routes>
     </BrowserRouter>
   </div>
