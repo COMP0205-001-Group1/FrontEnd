@@ -9,7 +9,7 @@ function Navigation() {
   };
 
   return (
-    <Navbar bg="white" expand="lg" style={navbarStyle}>
+    <Navbar bg="white" variant="lg" expand="lg" style={navbarStyle}>
       <Navbar.Brand href="/">Fire Soulution</Navbar.Brand>
       <div className="Headlogo">
         <div className="Headmonitor">
